@@ -29,7 +29,7 @@ class Config:
     """
     
     # === 自选股配置 ===
-    stock_list: List[str] = field(default_factory=lambda: ["01788"])
+    stock_list: List[str] = field(default_factory)
     
     
 
@@ -74,11 +74,9 @@ class Config:
     telegram_chat_id: Optional[str] = None  # Chat ID
     
     # 邮件配置（只需邮箱和授权码，SMTP 自动识别）
-    email_sender: Optional[str] = "abcd adaf fasdfa"  # 发件人邮箱
-    
-    
+    email_sender: Optional[str] = None  # 发件人邮箱
     email_password: Optional[str] = None  # 邮箱密码/授权码
-    email_receivers: List[str] = field(default_factory=lambda: ["abc@qq.com"])  # 收件人列表（留空则发给自己）
+    email_receivers: List[str] = field(default_factory=list)  # 收件人列表（留空则发给自己）
     
     
     # 自定义 Webhook（支持多个，逗号分隔）
