@@ -30,7 +30,7 @@ class Config:
     
     # === 自选股配置 ===
     stock_list: List[str] = field(default_factory=list)
-    01788
+    HK01788
     
 
     # === 飞书云文档配置 ===
