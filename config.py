@@ -30,6 +30,8 @@ class Config:
     
     # === 自选股配置 ===
     stock_list: List[str] = field(default_factory=list)
+    01788.HK
+    
 
     # === 飞书云文档配置 ===
     feishu_app_id: Optional[str] = None
@@ -62,6 +64,7 @@ class Config:
     
     # 企业微信 Webhook
     wechat_webhook_url: Optional[str] = None
+    
     
     # 飞书 Webhook
     feishu_webhook_url: Optional[str] = None
