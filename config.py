@@ -30,6 +30,7 @@ class Config:
     
     # === 自选股配置 ===
     stock_list: List[str] = field(default_factory=list)
+
     # === 飞书云文档配置 ===
     feishu_app_id: Optional[str] = None
     feishu_app_secret: Optional[str] = None
@@ -62,7 +63,6 @@ class Config:
     # 企业微信 Webhook
     wechat_webhook_url: Optional[str] = None
     
-    
     # 飞书 Webhook
     feishu_webhook_url: Optional[str] = None
     
@@ -74,7 +74,6 @@ class Config:
     email_sender: Optional[str] = None  # 发件人邮箱
     email_password: Optional[str] = None  # 邮箱密码/授权码
     email_receivers: List[str] = field(default_factory=list)  # 收件人列表（留空则发给自己）
-    
     
     # 自定义 Webhook（支持多个，逗号分隔）
     # 适用于：钉钉、Discord、Slack、自建服务等任意支持 POST JSON 的 Webhook
